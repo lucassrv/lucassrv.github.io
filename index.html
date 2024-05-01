@@ -1,53 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0066)file:///Users/lucasvieira/Dev/github/lucassrv.github.io/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Vieira</title>
+    <title>lucas vieira</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000;
+            color: #00ff00;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        .container {
-            display: flex;
-            align-items: center;
-        }
-        .profile-image {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
             overflow: hidden;
         }
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .terminal {
+            background-color: #000;
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            overflow-y: auto; /* Added overflow-y for scrolling if needed */
+            padding: 20px;
+            box-sizing: border-box;
         }
-        .name {
-            margin-left: 20px;
-            font-size: 24px;
+        .prompt {
+            color: #00ff00;
+        }
+        .command {
+            color: #00ff00;
+        }
+        .output {
+            color: #00ff00;
+        }
+        .caret {
+            animation: blink-caret 1s step-end infinite;
+            color: #00ff00;
+            opacity: 1;
         }
         .linkedin-link {
             color: #0077B5;
             text-decoration: none;
         }
+        @keyframes blink-caret {
+            from, to { 
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-image">
-            <img src="profile.jpg" alt="Lucas Vieira" title="I'm the one with glasses">
-        </div>
-        <div class="name">
-            <a href="https://www.linkedin.com/in/lucastvieira/" class="linkedin-link" target="_blank">Lucas Vieira</a>
-        </div>
+    <div class="terminal">
+        <p><span class="prompt">$</span> <span class="command">cd ./lucassrv</span></p>
+        <p><span class="prompt">$</span> <span class="command">ls</span></p>
+        <p><span class="output">lucassrv.html</span></p>
+        <p>
+            <span class="prompt">$</span> <span class="command">
+                <a href="lucassrv.html" class="linkedin-link" target="_blank">open lucassrv.html</a>
+            </span>
+        </p>
+        <p><span class="caret">_</span></p>
     </div>
-</body>
-</html>
+
+
+
+</body></html>
